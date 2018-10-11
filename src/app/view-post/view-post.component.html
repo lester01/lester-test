@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <div *ngIf="post">
+      <label>Title:</label>
+      <p (click)="isEdit=true" *ngIf="!isEdit">{{ post.title }}</p>
+      <input *ngIf="isEdit" [(ngModel)]="post.title" class="form-control">
+    </div>
+    <div *ngIf="post">
+      <label>Body:</label>
+      <p (click)="isEdit=true" *ngIf="!isEdit">{{ post.body }}</p>
+      <textarea  *ngIf="isEdit" [(ngModel)]="post.body" rows="5" class="form-control"></textarea>
+    </div>
+  </div>
+  
+  <!-- <button (click)="isEdit=true">Edit</button> -->
+  <button *ngIf="isEdit" (click)="editPost(); isEdit=false" class="btn btn-success">Save</button>
+  <button (click)="deletePost(post)" class="btn btn-danger">Delete</button>
+  <button (click)="goBack()" class="btn btn-dark">Go Back</button>
+</div>

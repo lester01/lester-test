@@ -1,0 +1,22 @@
+.btn {
+    width: 100px;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+  
+  .card-body {
+    border: 3px solid #7B7D7D;
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #D0D3D4;
+  }
+  
+  label {
+    margin-top: 5px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  

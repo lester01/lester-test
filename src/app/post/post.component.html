@@ -1,0 +1,36 @@
+
+<button (click)="showPostForm = !showPostForm" routerLink="/add-post" class="btn btn-primary mb-3">Add Post</button>
+<!-- <div class="card card-body" *ngIf="showPostForm">
+  <h2>Add Post</h2>
+
+  <form>
+    <div class="form-group">
+      <label>Title:</label>
+      <input type="text" class="form-control" name="title"
+      #title>
+    </div>
+    <div class="form-group">
+      <label>Body:</label>
+      <input type="text" class="form-control" name="body" 
+      #body>
+    </div>
+    <input type="hidden" name="id"
+    [(ngModel)]="post.id">
+    <button (click)="addPost(title.value, body.value)" type="button" class="btn btn-dark">Add</button>
+  </form>
+</div> -->
+
+<h2>Posts</h2>
+
+<div class="card" *ngFor="let post of posts">
+  <div class="card-body" routerLink="/view-post/posts/{{post.id}}">
+      <h3>
+        {{ post.title }}
+      </h3>
+      <p>{{ post.body }}</p>
+  </div>
+
+  <!-- <button (click)="removePost(x, x.id)" class="btn btn-danger"><i class="fa fa-remove"></i> Delete</button>
+      <button (click)="editPost(x,x.id)" class="btn btn-success" routerLink="/edit-post/posts/{{x.id}}"><i class="fa fa-pencil"></i> Edit</button>
+      <button class="btn btn-info" routerLink="/view-post/posts/{{x.id}}"><i class="fa fa-eye"></i> View</button> -->
+</div>
